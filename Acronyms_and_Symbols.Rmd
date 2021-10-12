@@ -1,0 +1,64 @@
+---
+title: "Acronyms and Symbols"
+author: "Robert A. Stevens"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+$\alpha$ = Significance level, Type I error
+
+$\beta$ = Type II error
+
+$\chi^2$ = Chi-squared distribution value
+
+${\chi^2}^{-1}$ = Inverse of Chi-squared distribution value
+
+CI = Confidence Interval
+
+$d$ = Mean of difference of paired values
+
+df = Degrees of freedom
+
+$F$ = F distribution value
+
+$F^{-1}$ = Inverse of F distribution value
+
+$H_0$ = Null hypothesis
+
+$H_1$ = Alternative hypothesis
+
+LCL = Lower Confidence Limit
+
+$\mu$ = Mean of a population
+
+$N$ = Normal distribution value
+
+$N^{-1}$ = Inverse of Normal distribution value
+
+$n$ = Number of cases, or values, in a sample
+
+OC = Operating Characteristics
+
+$P(\;)$ = Probability statement
+
+$p$ = p-value, or probability value
+
+$s$ = Sample standard deviation
+
+$\sigma$ = Population standard deviation
+
+$s^{2}$ = Sample variance
+
+$\sigma^{2}$ = Population variance
+
+$t$ = t distribution value
+
+$t^{-1}$ = Inverse of t distribution value
+
+UCL = Upper Confidence Limit
+
+$X$ = Individual, or raw, value in a distribution
+
+$\bar{X}$ = Mean of a sample
+
+$z$ = Standard value
