@@ -1,11 +1,9 @@
 ---
-title: "BasicStatistics2"
+title: "Basic Statistics 2"
 author: "Robert A. Stevens"
-date: "Saturday, July 11, 2015"
-output: html_document
+date: "`r Sys.Date()`"
+output: github_document
 ---
-
-# Basic Statistics 2
 
 ## Normal Distribution
 

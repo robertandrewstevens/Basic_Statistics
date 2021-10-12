@@ -1,13 +1,11 @@
 ---
-title: "BasicStatistics1"
+title: "Basic Statistics 1"
 author: "Robert A. Stevens"
-date: "Friday, July 03, 2015"
-output: html_document
+date: "`r Sys.Date()`"
+output: github_document
 ---
 
-# Basic Statistics 1
-
-Goals of Class
+## Goals of Class
 
 - Appreciate the importance of statistically examining products and processes
 
@@ -15,7 +13,7 @@ Goals of Class
 
 - Use software to perform "simple" statistical analyses
 
-Outline
+## Outline
 
 1. Introduction
 
@@ -75,9 +73,9 @@ In the 1980s, many U.S. businesses realized they lost their competitive advantag
 
 ![Figure 4.  "Statistic" versus "Statistics"](DIFK.png)
 
-Statistic:  A value calculated from data sampled from a population that is used to make an inference about the population.
+**Statistic:**  A value calculated from data sampled from a population that is used to make an inference about the population.
 
-Statistics:  A body of tools, methods, and concepts that helps us to collect and present data in ways that facilitate the evaluation of current theories and stimulate the formation of new theories (Brian Joiner, 1990).
+**Statistics:**  A body of tools, methods, and concepts that helps us to collect and present data in ways that facilitate the evaluation of current theories and stimulate the formation of new theories (Brian Joiner, 1990).
 
 The only difference between these two terms is the letter "s"; however, they have very different meanings.  The first one is used to summarize **Data**.  The second one is used to help the journey from **Data** to **Information** to **Facts** to **Knowledge**. 
 
@@ -182,6 +180,4 @@ Deming's Message
     + Improve the system
     + Better satisfy our customers' needs
 
-Have said all that, think of this class as how to make decisions in the presence of variation.
-
-
+Having said all that, think of this class as how to make decisions in the presence of variation.
