@@ -1,0 +1,38 @@
+Envoi
+================
+Robert A. Stevens
+2022-07-18
+
+“You haven’t told me yet,” said Lady Nuttal, “what it is your fiance
+does for a living.”
+
+“He’s a statistician,” replied Lamia, with an annoying sense of being on
+the defensive.
+
+Lady Nuttal was obviously taken aback. It had not occurred to her that
+statisticians entered into normal social relationships. The species, she
+would have surmised, was perpetuated in some collateral manner, like
+mules.
+
+“But Aunt Sara, it’s a very interesting profession,” said Lamia warmly.
+
+“I don’t doubt it,” said her aunt, who obviously doubted it very much.
+“To express anything important in mere figures is so plainly impossible
+that there must be endless scope for well-paid advice on the how to do
+it. But don’t you think that life with a statistician would be rather,
+shall we say, humdrum?”
+
+Lamia was silent. She felt reluctant to discuss the surprising depth of
+emotional possibility which she had discovered below Edward’s numerical
+veneer.
+
+“It’s not the figures themselves,” she said finally. “It’s what you do
+with them that matters.”
+
+– K.A.C. Manderville, *The Undoing of Lamia Gurdleneck*
+
+Source: H. Ascher and H. Feingold, *Repairable Systems Reliability:
+Modeling, Inference, Misconceptions and Their Causes*
+
+Original Source: M.G. Kendall and A. Stuart, *The Advanced Theory of
+Statistics. Volume 2, Inference and Relationship*

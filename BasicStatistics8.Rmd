@@ -1,0 +1,71 @@
+---
+title: "Lab"
+author: "Robert A. Stevens"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+Optional and Time Permitting
+
+## Guidelines
+
+- The purpose of the Lab is to demonstrate that you learned the content of the course and gain additional insight of the topics
+
+- Instructions are provided for each exercise, but there are no answer sheets
+    + There are no wrong answers
+    + The data are randomly generated, so each person will have a different answer
+
+- Please try the exercises to the best of your ability
+    + Feel free to ask questions if you are uncertain what to do or ask for help if you get stuck
+
+## Exercise 8-1
+
+- Refer to Exercise 3-2
+
+- Use Monte Carlo to simulate 10 values with the same Mean and Std
+
+- Analyze and plot the simulated data and compare to the original data
+
+- Repeat for n = 20 and n = 40
+
+## Exercise 8-2
+
+- Refer to Exercises 5-1 and 8-1
+
+- Can we conclude that the simulated data has a mean not equal to 10 years with 90% confidence?
+    + n = 10
+    + n = 20
+    + n = 40
+
+- Refer to Exercises 5-2 and 8-1
+
+- Can we conclude that the simulated data has a mean greater than 10 years with 90% confidence?
+    + n = 10
+    + n = 20
+    + n = 40
+
+## Exercise 8-3
+
+- Refer to Exercises 6-1 and 6-2
+
+- Repeat Exercise 8-1 by regenerating data sets with n = 10, 20 and 40
+
+- For each sample size (10, 20 and 40), can we conclude with 90% confidence:
+    + 1st data set (A) is different than 2nd data set (B)
+    + A is better than B
+    + A is worse than B
+
+## Exercise 8-4
+
+- Refer to Exercise 7-2
+
+- Using SimuMatic, generate 500 data sets of sample size 41 to demonstrate 50% reliability (mean) with 90% confidence (1-sided lower)
+    + See next page
+
+- Review the output
+
+- What is the 1-sided LCL?
+
+- Change the mean to 9.0 and locate the 1-sided UCL on the plot
+
+- Find a value for the mean that gives a 1-sided LCL > 10.0 with n = 41

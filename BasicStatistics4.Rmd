@@ -1,0 +1,419 @@
+---
+title: "Hypothesis Testing and Confidence Intervals"
+author: "Robert A. Stevens"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+```
+Statistical Methods
+    Descriptive Statistics
+    Inferential Statistics
+        Hypothesis Testing
+        Confidence Intervals
+```
+
+Statistical methods can be broken down into two branches: descriptive statistics, which was covered in the previous section, and inferential statistics.
+
+Inferential statistics can be further broken down into two branches: hypothesis testing and confidence intervals.
+
+This section will explain both and show how they are similar (the same?).
+
+This section is a prerequisite for:
+
+- Section 5: Tests of Evaluation
+
+- Section 6: Tests of Comparison
+
+- Section 7: Planning Tests of Evaluation
+
+## Population and Sample
+
+[make a plot of 100 points and randomly sample 10 and show with different color/size/border with labels "Population" and "Sample"]
+
+*Population* is the entire area of interest.
+
+*Sample* is a subset of the population.
+
+The key question to ask is: "What is the relationship between the population and the sample?"
+
+Like professionals in many other fields, statisticians like to call the same things by different names and different things by the same name (how many definitions are there for "force" or "power" or "is"?).
+
+$\mu$ = Population Mean Parameter
+
+$\sigma$ = Population Standard Deviation Parameter
+
+$\bar{X}$ = Sample Mean Statistic
+
+$s$ = Sample Standard Deviation Statistic
+
+Population: "It's all Greek to me."
+
+## Example
+
+[make a plot of N points and randomly sample n and show with different color/size/border with labels "Population" and "Sample" for Nielsen - check their web page.]
+
+Sampling happens every day.
+
+If you are a couch potato, your whole life is affected by Nielsen ratings, which are determined by a sample of TV viewers.
+
+Statistical inference allows us to make statements about the *population* using the *sample* data.
+
+## Hypothesis Testing
+
+[Find graphics from 538 (?)]
+
+Hypothesis testing is the process of taking a practical problem and translating it to a statistical problem.
+
+Because we are using samples (and relatively small ones at that) to estimate population parameters, we are allowing for a level of uncertainty in our estimates.
+
+Inferential statistics, with some assumptions, allow us to quantify this uncertainty.
+
+**Totally eliminating the uncertainty would require examining 100% of the population.**
+
+Above is a common example of hypothesis testing.
+
+Have you ever received a phone call asking for whom you intend to vote?
+
+### The Diagnostic Process
+
+["Law & Order" cast, time, day, network - URL?]
+
+1. What is causing X?
+
+2. Information gathering
+
+3. Interpretation
+
+4. Hypothesis generation
+
+5. Strongly indicated?
+    + No: Continue to step "6. Hypothesis testing"
+    + Yes: Jump to step "9. Diagnosis"
+
+6. **Hypothesis testing**
+
+7. Confirmed?
+    + No: Go back to step "3. Interpretation"
+    + Yes: Continue to step "8. Other causes?"
+
+8. Other causes?
+    + No: Continue to step "9. Diagnosis"
+    + Yes: Go back to step "3. Interpretation"
+
+9. Diagnosis
+
+This flowchart shows a universal diagnostic process, also known as "problem solving." It is used by the medical industry, both EMS and doctors, the criminal justice industry, and may others.If you want to see a simulation of this process, watch any episode of "Law & Order." Each show does this in 1 hour.
+
+Is this how you solve problems at your organization?
+
+The key point is that this flowchart shows hypothesis generation and hypothesis testing in their proper context for solving problems.
+
+Technically, a hypothesis is a tentative assumption made in order to test a theory to its logical or empirical conclusion. In statistics, it is an assumption about a population parameter, e.g., population mean, proportion, variance, etc. And it should be stated before analysis.
+
+There are two types of hypotheses in hypothesis testing: "null" and "alternative."
+
+## The Null Hypothesis
+
+The null hypothesis is what is being tested ("Null" = No difference).
+
+Always has equality sign: `=`, `<=` , or `>=`.
+
+Designated $H_0$.
+
+Specified as $H_0$: *parameter* `=`, `<=`, or `>=` some value. For example, $H_0$: $\mu$ `=` 3.
+
+The Null Hypothesis ($H_0$) is assumed to be true. This is like the defendant assumed to be innocent. You are the prosecuting attorney, you must provide evidence that this assumption is probably not true.
+
+## Statistical Hypothesis Testing
+
+$H_0$ = Hypothesis being tested
+
+- True state of nature:
+    + $H_0$ True
+    + $H_0$ False
+
+- Our decision:
+    + Do not reject $H_0$
+    + Reject $H_0$
+
+Decision            $H_0$ True   $H_0$ False
+------------------- ------------ -------------
+Do not reject $H_0$ Correct      Type II Error
+Reject $H_0$        Type I Error Correct
+
+- There are two correct decisions one can make:
+    + Do not reject $H_0$ when it is True
+    + Reject $H_0$ when it is False
+
+- There are two errors one can make:
+    + Type I: Reject $H_0$ when it is True ($\alpha$)
+    + Type II: Do not reject $H_0$ when it is False ($\beta$)
+
+## The Alternative Hypothesis
+
+The alternative hypothesis is the opposite of null hypothesis. Always has inequality sign: `!=` (not equal), `<`, or `>`.
+
+Null Alternative
+---- -----------
+`=`  `!=`
+`<=` `>`
+`>=` `<`
+
+Designated $H_1$.
+
+Specified $H_1$: *parameter* `!=`, `<`, or `>` some value. For example, $H_1$: $\mu$ `!=` 3
+
+## Identifying Hypotheses Steps
+
+1. State question statistically
+
+2. State opposite statistically
+    + Must be mutually exclusive and exhaustive
+
+3. Select and state alternative hypothesis
+    + Has the `!=`, `<` or `>` sign
+
+4. State null hypothesis
+    + Has the `=`, `>=` or `<=` sign
+
+## Identifying Hypotheses Examples
+
+- Is the population mean **different** from 3?
+    + *"Two-sided" or "Two-tailed" Test*
+
+1. $\mu$ `!=` 3
+
+2. $\mu$ `=` 3
+
+3. $H_1$: $\mu$ `!=` 3
+
+4. $H_0$: $\mu$ `=` 3
+
+- Is the population mean **greater than** 3? 
+    + *"One-sided" or "One-tailed" Test*
+
+1. $\mu$ `>` 3
+
+2. $\mu$ `<=` 3
+
+3. $H_1$: $\mu$ `>` 3
+
+4. $H_0$: $\mu$ `<=` 3
+
+- Is the population mean **different** from 12 hours?
+    + *"Two-sided" or "Two-tailed" Test*
+
+1. $\mu$ `!=` 12
+
+2. $\mu$ `=` 12
+
+3. $H_1$: $\mu$ `!=` 12
+
+4. $H_0$: $\mu$ `=` 12
+
+- Is the population mean **less than** 12 hours? 
+    + *"One-sided" or "One-tailed" Test*
+
+1. $\mu$ `<` 12
+
+2. $\mu$ `>=` 12
+
+3. $H_1$: $\mu$ `<` 12
+
+4. $H_0$: $\mu$ `>=` 12
+
+## Central Limit Theorem
+
+$X$ ~ $D$($\mu$, $\sigma$) =>
+
+$\bar{X}$ $\approx$ N($\mu$, $\sigma$/sqrt(n))
+
+$D$ = Any Distribution
+
+$N$ = Normal Distribution
+
+In random sampling from a arbitrary population with mean $\mu$ and standard deviation $\sigma$, the distribution of $\bar{X}$ when $n$ is large is approximately normal, with mean μ and standard deviation $\sigma$/sqrt(n).
+
+Because of this, you will see "sqrt(n)" appear many times in this class.
+
+Note: the word "central" does not imply convergence to a average value; it means that it is *central* to the field of statistics.
+
+## Sampling Distribution
+
+[density chart for X and X-bar]
+
+It is *unlikely* that we would get a sample mean of 2.5, if in fact the population mean was 3.4.
+
+Therefore, we reject the hypothesis that $\mu$ = 3.4.
+
+Unlikely? How unlikely are the results? This is the significance level ($\alpha$).
+
+## Significance Level
+
+Defines unlikely values of sample statistic if null hypothesis is true
+
+- Called rejection region of sampling distribution
+    + a.k.a. Critical region
+
+- Is a probability (0.0 < p < 1.0)
+
+- Denoted $\alpha$ (alpha)
+
+- Selected by researcher at start - typical values are 0.01, 0.05 and 0.10.
+
+[Probability Distribution Calculator for Two-sided p = 0.05 and df = 14 => t = 2.144787 or start with t and calculate p?]
+
+In Statistica, put $\alpha$ in the probability ("p") field and look at the resulting critical value in the value field ("t" in this case).
+
+## Statistical Hypothesis Testing (2)
+
+### Hypothesis Testing Rejection Regions: Two-sided version
+
+- Think of the game of football (either version: American and that other one).
+
+- The goal posts are some specified distance apart.
+
+- In games, this distance is determined by the rules of the game.
+
+- In statistics, the "rules of the game" are determined by our threshold of the amount of risk we are willing to take.
+
+- We set the "goal posts" such that the area in the tails equals some pre-specified value.
+
+- This establishes the amount of evidence against the null hypothesis that should be collected before we can make a decision.
+
+- For the two-sided version, the value of α is divided into two parts: $\alpha$/2 on the left side and $\alpha$/2 on the right side.
+
+- If the sample statistic falls in the non-rejection region, then we do not reject the null hypothesis
+    + Caution: just because we did not reject the null hypothesis does not mean it is true
+    + It only means that we might not have gathered enough evidence to show that it is most likely not true
+
+- Another way of thinking about this (the statistical way) is that due to the variability our data and the relatively small sample size, we expect our estimates to vary and we need a way to distinguish between the signal (difference) and the noise (no difference).
+
+- If the sample statistic falls in the rejection region, then we reject the null hypothesis.
+
+## Statistical Hypothesis Testing (1)
+
+### Hypothesis Testing Rejection Regions: One-sided version
+
+- For the one-sided version, the value of α is not divided into two parts – it all goes to one side.
+
+- If the sample statistic falls in the non-rejection region, then we do not reject the null hypothesis.
+
+- If the sample statistic falls in the rejection region, then we reject the null hypothesis.
+
+## How it works
+
+p-value          Interpretation
+---------------- ---------------------------------------
+p < 0.01         Very strong evidence against $H_0$
+0.01 <= p < 0.05 Moderate evidence against $H_0$
+0.05 <= p < 0.10 Suggestive evidence against $H_0$
+0.10 <= p        Little or no real evidence against $H_0$
+
+[http://home.ubalt.edu/ntsbarsh/Business-stat/opre504.htm]
+
+- After data is collected, we calculate a test statistic
+
+- If $H_0$ is true (no difference), then the test statistic is very small and has a high p-value
+
+- If $H_1$ is true, the test statistic will be large and the p-value will be small
+
+The p-value is the chance the results occurred when H0 is true
+
+- The p-value is based on an assumed or actual reference distribution
+    + Normal, t, chi-squared, F distribution, etc.
+
+## Confidence???
+
+[http://www.maxim-ic.com/appnotes.cfm/appnote_number/703/ln/en]
+
+Common definitions of confidence: faith, trust ("their confidence in God’s mercy"); a feeling or consciousness of one’s powers or of reliance on one’s circumstances ("he had perfect confidence in his ability to succeed"); the quality or state of being certain ("they had every confidence of success"). [Webster’s New Collegiate Dictionary]
+
+These are psychology based definitions.
+
+Statistical confidence: the fraction of times the confidence interval will capture the true value if the experiment is hypothetically repeated a large number of times. Sometimes called "s-confidence" to distinguish it from the common definition or "engineering confidence."
+
+## 95% Confidence Interval
+
+Confidence Interval (CI): A group of continuous or discrete adjacent values that is used to estimate a statistical parameter (as a mean or variance) and that tends to include the true value of the parameter a predetermined portion of the time if the process of finding the group of values is repeated a number of times. Confidence intervals are used to make inferences about a population given data from a sample. [Webster’s New Collegiate Dictionary]
+
+CIs are defined such that:
+
+P(LCL < X < UCL) = 1 - $\alpha$
+
+where 
+
+LCL = Lower Confidence Limit
+
+UCL = Upper Confidence Limit
+
+The concept of a confidence intervals is quite difficult to grasp for beginners.For example, assume that our population parameter of interest is the population mean. What is the meaning of a 95% confidence interval in this situation? Many want to say that a 95% confidence interval means that there is a 95% chance that the confidence interval contains the population mean. But any particular confidence interval either contains the population mean, or it doesn’t. The confidence interval should not be interpreted as a probability. The correct interpretation is based on repeated sampling. If samples of the same size are drawn repeatedly from a population, and a confidence interval is calculated from each sample, then 95% of these intervals should contain the population mean.
+
+## Hypothesis Tests and Confidence Intervals
+
+Hypothesis tests determine whether a sample statistic falls within a specified interval. Conversely, we can determine whether a specified value falls within the CI for the sample statistic.
+
+There is an extremely close relationship between confidence intervals and hypothesis testing. When a 95% confidence interval is constructed, all values in the interval are considered plausible values for the parameter being estimated. Values outside the interval are rejected as implausible. If the value of the parameter specified by the null hypothesis is contained in the 95% interval then the null hypothesis cannot be rejected at the 0.05 level. If the value specified by the null hypothesis is not in the interval then the null hypothesis can be rejected at the 0.05 level. [http://www.ruf.rice.edu/~lane/hyperstat/B15183.html]
+
+These methods are mathematically equivalent and should agree on the conclusion (assuming they make the same statistical assumptions). Some consider CIs to be more informative and more sound statistically, because the width of CIs shows uncertainty and CIs are based on data, not assumed distribution.
+
+*Sometimes CIs are easier to determine.*
+
+## CI Approach
+
+#### Two-sided
+
+$H_0$: $\mu$ = $\mu_0$ versus $H_1$: $\mu$ != μ0
+
+The two-sided CI is the easiest: just estimate the LCL and UCL and see where the hypothesized value falls.
+
+If it falls inside the LCL and UCL, then do not reject the null hypothesis.
+
+If it falls outside the LCL and UCL, then reject the null hypothesis.
+
+#### One-sided
+
+$H_0$: $\mu$ > $\mu_0$ versus $H_1$: $\mu$ < $\mu_0$
+
+One-sided CIs are more difficult: you need to determine in which direction to look.
+
+Look at the alternative hypothesis. For this version, we are trying to determine if the actual mean is less than the hypothesized mean. Therefore, we want to see how large we would expect the sample value to be given the variability in the data and the sample size. This implies we should look at the UCL.
+
+In this case, if the hypothesized value falls to the left of the UCL, then do not reject the null hypothesis; if it falls to the right of the UCL, then reject the null hypothesis.
+
+For this version, we are trying to determine if the actual mean is greater than the hypothesized mean. Therefore, we want to see how small we would expect the sample value to be given the variability in the data and the sample size. This implies we should look at the LCL.
+
+In this case, if the hypothesized value falls to the right of the LCL, then do not reject the null hypothesis; if it falls to the left of the LCL, then reject the null hypothesis.
+
+## Exercise 4-1
+
+Suppose someone calculated Two-sided 90% confidence limits, but you really wanted a One-sided LCL.
+
+Without re-calculating the confidence limits, what would be the equivalent confidence level for a One-sided LCL?
+
+This question is not an arbitrary test of your abilities; many software packages do this all the time, and you, as the user, need to know how to interpret the results.
+
+## Exercise 4-2
+
+Time permitting, read "Hypothesis Testing: Guilty or Innocent"; otherwise, treat as homework
+
+## Review
+
+[http://home.ubalt.edu/ntsbarsh/Business-stat/opre504.htm]
+
+Do you know what the following are:
+
+- Population?
+
+- Sample?
+
+- Null Hypothesis?
+
+- Alternative Hypothesis?
+
+- Hypothesis test?
+    + One-sided versus Two-sided?
+
+- Confidence interval?
+    + One-sided versus Two-sided?
